@@ -1,4 +1,76 @@
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     padding: 0;
     margin: 0;
+}
+
+body{
+    width: 420px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 425px) {
+    @keyframes slidein {
+        0%{left: 650px;}
+        100%{left: 0;}
+    }
+    @keyframes slideout {
+        0%{left: 0px;}
+        100%{left: 650px;}
+    }
+
+    .menu{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        animation: slideout 1s;
+    }
+    
+    .menu-icon{
+        text-decoration: none;
+        color: black;
+        padding: 30px;
+        font-family: sans-serif;
+        padding: 15px;
+    }
+    
+    .menu-active{
+    
+    }
+    
+    .hamburger{
+        height: 35px;
+        width: 35px;
+        background-color: black;
+        padding: 1%;   
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    
+    .hamburger > input[type="checkbox"]{
+        visibility: hidden;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .line{
+        background-color: white;
+        width: 100%;
+        height: 15%;
+    }
+    
+    .footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+    }
 }
